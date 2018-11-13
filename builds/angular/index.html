@@ -21,6 +21,8 @@
 
   <script src="lib/angular/angular.min.js"></script>
 
+  <script src="js/app.js"></script>
+
 
 </head>
 
@@ -48,7 +50,13 @@
 
                   <label class="col-form-label text-right" for="searchQuery">
 
-                    search {{ query }}
+                    search
+
+                    <span ng-if="query">
+
+                      {{ 'for: ' + query }}
+
+                    </span>
 
                   </label>
 
@@ -88,15 +96,15 @@
 
               <img class="rounded-circle mr-3"
 
-                src="images/_tn.jpg"
+                ng-src="images/{{artist.shortname}}_tn.jpg"
 
-                alt="Photo of ">
+                alt="Photo of {{artist.name}}">
 
               <div class="media-body">
 
-                <h5 class="my-0 text-dark"></h5>
+                <h5 class="my-0 text-dark">{{artist.name}}</h5>
 
-                <div class="text-secondary font-italic"></div>
+                <div class="text-secondary font-italic">{{artist.reknown}}</div>
 
               </div><!-- media-body -->
 
