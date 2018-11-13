@@ -89,7 +89,7 @@
 
       <ul class=" list-group d-flex">
 
-        <li class="list-group-item" ng-repeat="artist in artists | filter:query">
+        <li class="list-group-item" ng-repeat="artist in artists | orderBy:'name'">
 
 
             <div class="media d-flex align-items-center">
