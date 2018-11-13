@@ -102,9 +102,17 @@
 
               <div class="media-body">
 
-                <h5 class="my-0 text-dark">{{artist.name}}</h5>
+                <h5 class="my-0 text-dark">
 
-                <div class="text-secondary font-italic">{{artist.reknown}}</div>
+                  {{artist.name | uppercase}}
+
+                </h5>
+
+                <div class="text-secondary font-italic">
+
+                  {{artist.reknown | lowercase}}
+
+                </div>
 
               </div><!-- media-body -->
 
