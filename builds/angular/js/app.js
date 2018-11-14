@@ -8,6 +8,8 @@ myApp.controller('MyController', function MyController($scope, $http) {
 
       $scope.artists = response.data;
 
+      $scope.artistOrder = 'name';
+
     });
 
 });

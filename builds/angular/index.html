@@ -75,7 +75,7 @@
 
                 <div class="col">
 
-                  <select class="form-control form-control-inline mr-3 w-100">
+                  <select class="form-control form-control-inline mr-3 w-100" ng-model="artistOrder">
 
                     <option value="name">
 
@@ -99,7 +99,7 @@
 
                     <label class="form-check-label">
 
-                      <input class="form-check-input" type="radio" name="direction" checked>
+                      <input class="form-check-input" type="radio" name="direction" checked ng-model="direction">
 
                       asc
 
@@ -111,7 +111,7 @@
 
                     <label class="form-check-label">
 
-                      <input class="form-check-input" type="radio" name="direction" value="reverse">
+                      <input class="form-check-input" type="radio" name="direction" value="reverse" ng-model="direction">
 
                       desc
 
@@ -140,7 +140,7 @@
 
       <ul class=" list-group d-flex">
 
-        <li class="list-group-item" ng-repeat="artist in artists | filter:query | orderBy:'name'">
+        <li class="list-group-item" ng-repeat="artist in artists | filter:query | orderBy:artistOrder:direction">
 
 
             <div class="media d-flex align-items-center">
