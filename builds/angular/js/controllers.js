@@ -1,15 +1,17 @@
 var myControllers = angular.module('myControllers', []);
 
-myControllers.controller('SearchController', function MyController($scope, $http) {
+myControllers.controller('SearchController',
 
-  $http.get('js/data.json')
+  function MyController($scope, $http) {
 
-    .then(function (response) {
+    $http.get('js/data.json')
 
-      $scope.artists = response.data;
+      .then(function (response) {
 
-      $scope.artistOrder = 'name';
+        $scope.artists = response.data;
 
-    });
+        $scope.artistOrder = 'name';
+
+      });
 
 });
