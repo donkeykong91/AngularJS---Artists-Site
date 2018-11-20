@@ -121,30 +121,33 @@
         ng-repeat="item in artists | filter: query |
         orderBy:artistOrder:direction">
 
+            <a href="#/details/{{artists.indexOf(item)}}">
 
-            <div class="media d-flex align-items-center">
+              <div class="media d-flex align-items-center">
 
-              <img class="rounded-circle mr-3"
-                ng-src="images/{{item.shortname}}_tn.jpg"
-                alt="Photo of {{item.name}}">
+                <img class="rounded-circle mr-3"
+                  ng-src="images/{{item.shortname}}_tn.jpg"
+                  alt="Photo of {{item.name}}">
 
-              <div class="media-body">
+                <div class="media-body">
 
-                <h5 class="my-0 text-dark">
+                  <h5 class="my-0 text-dark">
 
-                  {{item.name}}
+                    {{item.name}}
 
-                </h5>
+                  </h5>
 
-                <div class="text-secondary font-italic">
+                  <div class="text-secondary font-italic">
 
-                  {{item.reknown}}
+                    {{item.reknown}}
 
-                </div>
+                  </div>
 
-              </div><!-- media-body -->
+                </div><!-- media-body -->
 
-            </div><!-- media -->
+              </div><!-- media -->
+
+            </a>
 
 
         </li>

@@ -31,7 +31,7 @@ myApp.config(
                          }
                    )
 
-                   .when('/details',
+                   .when('/details/:itemId',
 
                          {
 

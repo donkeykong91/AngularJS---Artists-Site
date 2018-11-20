@@ -18,7 +18,7 @@ myControllers.controller('SearchController',
 
 myControllers.controller('DetailsController',
 
-  function MyController($scope, $http) {
+  function MyController($scope, $http, $routeParams) {
 
     $http.get('js/data.json')
 
@@ -26,7 +26,7 @@ myControllers.controller('DetailsController',
 
         $scope.artists = response.data;
 
-        $scope.whichItem = 0;
+        $scope.whichItem = $routeParams.itemId;
 
       });
 
