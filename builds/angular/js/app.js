@@ -29,6 +29,17 @@ myApp.config(
                             controller: 'SearchController'
 
                          }
+                   )
+
+                   .when('/details',
+
+                         {
+
+                            templateUrl: 'js/partials/details.html',
+
+                            controller: 'DetailsController'
+
+                         }
                    );
 
                }
